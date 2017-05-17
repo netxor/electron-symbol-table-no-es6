@@ -1,44 +1,44 @@
-import * as message from './message-box';
-import * as global from './global';
+const message = require('./message-box');
+const global = require('./global');
 
-const fileOpen = () => {
+module.exports = {
+  const fileOpen = () => {
 
-  dialog.showOpenDialog((identifiers) => {
+    dialog.showOpenDialog((identifiers) => {
 
-    if (identifiers === undefined) {
+      if (identifiers === undefined) {
 
-      console.log("Файл не выбран");
-      return;
+        console.log("Файл не выбран");
+        return;
 
-    }
-
-    fs.readFile(identifiers[0], "utf-8", (err, data) => {
-
-      if (err) throw err;
-      global.list = data.toString().split('\n');
-
-      /*
-      var BST = new BinarySearchTree();
-
-      for (let i = 0; i < list.length; i++) {
-        BST.insertNode(list[i]);
       }
 
-      console.log(BST);
-      */
+      fs.readFile(identifiers[0], "utf-8", (err, data) => {
 
-      select = document.getElementById("tod");
+        if (err) throw err;
+        global.list = data.toString().split('\n');
 
-      for (index in global.list) {
-        select.options[select.options.length] = new Option(global.list[index], index);
-      }
+        /*
+        var BST = new BinarySearchTree();
 
-      message.identifiersLength();
+        for (let i = 0; i < list.length; i++) {
+          BST.insertNode(list[i]);
+        }
+
+        console.log(BST);
+        */
+
+        select = document.getElementById("tod");
+
+        for (index in global.list) {
+          select.options[select.options.length] = new Option(global.list[index], index);
+        }
+
+        message.identifiersLength();
+
+      });
 
     });
 
-  });
-
+  }
 }
-
-export default fileOpen;

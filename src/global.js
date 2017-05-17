@@ -1,3 +1,3 @@
-export const list = [];
-export const totalCompare = 0;
-export const counter = 0;
+module.exports = const list = [];
+module.exports = totalCompare = 0;
+module.exports = counter = 0;
