@@ -4,18 +4,15 @@
   "description": "",
   "main": "main.js",
   "scripts": {
-    "build": "NODE_ENV=production babel src --out-dir dist",
     "start": "./node_modules/.bin/electron ."
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/netxor/electron-symbol-table.git"
+    "url": "git+https://github.com/netxor/electron-symbol-table-no-es6.git"
   },
   "author": "Arman Kobzhassarov",
   "license": "ISC",
   "devDependencies": {
-    "babel-cli": "^6.24.1",
-    "babel-preset-env": "^1.4.0",
     "electron": "^1.6.8"
   }
 }
